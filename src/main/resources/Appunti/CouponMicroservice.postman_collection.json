@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "5ea6d4b8-dda6-4954-9305-f5e7420b58f6",
+		"name": "CouponMicroservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24547350"
+	},
+	"item": [
+		{
+			"name": "Inserimento coupon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\": \"cn7256su9\",\r\n    \"couponCode\": \"abcdefghi1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/insertCoupon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insertCoupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ricerca coupon per account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "jwt",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSR05MU044N0gxM0Q3NjFSIiwiZXhwIjoxNzAzMDkzNTY0LCJuYW1lIjoiQWxlc3NhbmRybyBBcmdlbnRpZXJpIiwic2NvcGUiOiJ1c2VyIn0.K5e41XIKPUZdvU0jzegyIPttuvkVOTMjrfPkoqgdjUw",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8095/findCoupon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095",
+					"path": [
+						"findCoupon"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
